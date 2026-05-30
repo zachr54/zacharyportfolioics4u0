@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zach's OOP Tutorial.">
+    <title>Zach | OOP Tutorial</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@400;600&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Zach.<span>Dev</span></a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="ics4u0.html">ICS4U0</a>
+            <a href="tutorial.html" class="active">Tutorial</a>
+            <a href="goals.html">Goals</a>
+            <a href="bibliography.html">Citations</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <section class="section" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="container reveal">
+            <h2 class="section-title">Tutorial: Object-Oriented Programming</h2>
+            <p class="section-subtitle">An overview of the core concepts I learned in the Object-Oriented Programming unit.</p>
+
+            <div class="card tutorial-card">
+                <h3><i class="fa-solid fa-cube"></i> What is OOP?</h3>
+                <p>Object-Oriented Programming (OOP) is a way of writing code by grouping related data and methods together into classes. Instead of having separate variables and functions scattered everywhere, OOP organizes a program around objects. This makes code easier to read, reuse, and update—especially in larger programs like the bank account system we built in class.</p>
+                <p>Here is a simple example from class. The <code>Test</code> class stores a string and splits it into words. The <code>printWords</code> method loops through and prints each one. In <code>main</code>, we create an object and call that method on it.</p>
+                <div class="code-showcase">
+                    <div class="code-header">
+                        <span class="dot red"></span>
+                        <span class="dot yellow"></span>
+                        <span class="dot green"></span>
+                        <span class="filename">Test.java</span>
+                    </div>
+                    <pre><code>public class Test {
+    private String str = "hello_my_name_is_zach";
+    private String[] words = str.split("_");
+
+    public void printWords() {
+        for (String word : words) {
+            System.out.print(word + " ");
+        }
+    }
+
+    public static void main(String[] args) {
+        Test t = new Test();
+        t.printWords();  // Output: hello my name is zach
+    }
+}</code></pre>
+                </div>
+                
+                <h3><i class="fa-solid fa-triangle-exclamation"></i> Common Mistakes & How to Avoid Them</h3>
+                <ul>
+                    <li><strong>God Classes:</strong> Creating one class that tries to handle everything in the program. <br><em>How to avoid:</em> Give each class one clear purpose instead of putting all the logic in one place.</li>
+                    <li><strong>Ignoring Encapsulation:</strong> Making all variables <code>public</code> so any part of the program can change them directly. <br><em>How to avoid:</em> Keep fields <code>private</code> and use getters and setters to control access. This protects the data inside your objects.</li>
+                    <li><strong>Over-using Inheritance:</strong> Building long chains of parent and child classes that become hard to follow. <br><em>How to avoid:</em> Use inheritance when it makes sense, like when <code>SavingsAccount</code> extends <code>BankAccount</code> because a savings account is a type of bank account.</li>
+                </ul>
+
+                <h3><i class="fa-solid fa-ban"></i> A World Without OOP</h3>
+                <p>Without OOP, programs would rely more on long lists of separate functions and global variables. In big projects, this can get messy fast—functions start changing data they were not meant to touch, and it becomes harder to find and fix bugs. OOP helps keep related code together through encapsulation, allowing it to interfere as little as possible with other aspects of the program.</p>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Zach.<span>Dev</span></h3>
+                <p>Working hard to grow every single day.</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zach. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

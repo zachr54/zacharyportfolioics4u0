@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zach's ICS4U0 Computer Science Portfolio.">
+    <title>Zach | ICS4U0 Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Zach.<span>Dev</span></a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="ics4u0.html" class="active">ICS4U0</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="goals.html">Goals</a>
+            <a href="bibliography.html">Citations</a>
+        </nav>
+    </header>
+
+    <!-- ICS4U0 Portfolio Section -->
+    <section id="ics4u0" class="portfolio section" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="container">
+            <h2 class="section-title">ICS4U0 Programming Portfolio</h2>
+            <p class="section-subtitle">A showcase of my solutions to key assignments, highlighting the core concepts I learned in the course.</p>
+
+            <div class="timeline">
+
+                <!-- Parallel Arrays -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fa-solid fa-table-columns"></i></div>
+                    <div class="timeline-content card portfolio-entry">
+                        <h3>Parallel Arrays Example</h3>
+                        <p>In this group assignment with Usayd I and Pranav V, we stored computer data using parallel arrays.</p>
+
+                        <p class="code-label">Setting up the parallel arrays</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ComputerPart1.java</span>
+                            </div>
+                            <pre><code>String[] name = {"HP", "Acer", "Apple", "Lenovo", "Asus"};
+String[] GPU = {"RTX 3050", "RTX 5080", "RTX 3060", "RTX 4060", "RX 9060"};
+String[] CPU = {"i7", "i5", "i9", "Ryzen 3", "Ryzen 5"};
+int[] RAM = {16, 32, 8, 16, 16};
+int[] batteryLife = {6, 7, 10, 12, 5};
+int[] yearMade = {2020, 2016, 2024, 2022, 2025};</code></pre>
+                        </div>
+
+                        <p class="code-label">Displaying all data with a for loop</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ComputerPart1.java</span>
+                            </div>
+                            <pre><code>public void displayAllData() {
+    for (int i = 0; i &lt; name.length; i++) {
+        System.out.println("Computer - " + name[i]);
+        System.out.println("CPU - " + CPU[i]);
+        System.out.println("GPU - " + GPU[i]);
+        System.out.println("RAM - " + RAM[i] + "GB");
+        System.out.println("Battery Life - " + batteryLife[i] + " hours");
+        System.out.println("Year Made - " + yearMade[i]);
+        System.out.println();
+    }
+}</code></pre>
+                        </div>
+
+                        <p class="code-label">Finding the best computer by comparing a score</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ComputerPart1.java</span>
+                            </div>
+                            <pre><code>public void displayTheBest() {
+    int bestComp = 0;
+    int bestScore = 0;
+
+    for (int i = 0; i &lt; name.length; i++) {
+        int score = RAM[i] + batteryLife[i] + yearMade[i];
+
+        if (score &gt; bestScore) {
+            bestScore = score;
+            bestComp = i;
+        }
+    }
+
+    System.out.println("The best computer is " + name[bestComp]);
+}</code></pre>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- OOP -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fa-solid fa-cubes"></i></div>
+                    <div class="timeline-content card portfolio-entry">
+                        <h3>Fantastical Invention — Object-Oriented Programming</h3>
+                        <p>For this assignment, I built an <code>ElementalBlade</code> class to represent a fantasy sword. This taught me how to group related data and behaviour into one class, use <code>private</code> fields for encapsulation, and control access through getters and setters.</p>
+
+                        <p class="code-label">Private fields and constructor</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ElementalBlade.java</span>
+                            </div>
+                            <pre><code>public class ElementalBlade {
+    private final String swordBaseMaterial;
+    private final Color colour;
+    private final boolean loyalty;
+    private final double lengthCM;
+    private final double weightKG;
+
+    private int durability;
+    private String swordName;
+    private boolean dualWield;
+    private int bladeSharpness;
+    private int manaLevel;
+
+    public ElementalBlade(String sBM, Color colo, boolean loy,
+            double lngCM, double wCM, String swordN, boolean dW) {
+        swordBaseMaterial = sBM;
+        colour = colo;
+        loyalty = loy;
+        lengthCM = lngCM;
+        weightKG = wCM;
+        durability = 100;
+        swordName = swordN;
+        dualWield = dW;
+        bladeSharpness = 100;
+        manaLevel = 100;
+    }
+}</code></pre>
+                        </div>
+
+                        <p class="code-label">Getters, setters, and validation</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ElementalBlade.java</span>
+                            </div>
+                            <pre><code>public int getDurability() {
+    return durability;
+}
+
+public void setDurability(int dur) {
+    if (dur &gt; 100) {
+        durability = 100;
+    } else if (dur &lt; 0) {
+        durability = 0;
+    } else {
+        durability = dur;
+    }
+}
+
+public void setBladeSharpness(int bladeS) {
+    if (bladeS &gt; 100) {
+        bladeSharpness = 100;
+    } else if (bladeS &lt; 0) {
+        bladeSharpness = 0;
+    } else {
+        bladeSharpness = bladeS;
+    }
+}</code></pre>
+                        </div>
+
+                        <p class="code-label">Methods that change object state</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">ElementalBlade.java</span>
+                            </div>
+                            <pre><code>public void attack() {
+    if (manaLevel &gt;= 5) {
+        durability -= 5;
+        bladeSharpness -= 1;
+        System.out.println("The enemy has been hit.");
+    } else {
+        System.out.println("Not enough mana!");
+    }
+}
+
+public void toggleWield() {
+    dualWield = !dualWield;
+    if (!dualWield) {
+        System.out.println("The Sword is now Single Wield.");
+    } else {
+        System.out.println("The Sword is now Dual Wield");
+    }
+}</code></pre>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Inheritance -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-icon"><i class="fa-solid fa-sitemap"></i></div>
+                    <div class="timeline-content card portfolio-entry">
+                        <h3>Inferno Blade — Inheritance</h3>
+                        <p>Building on <code>ElementalBlade</code>, I created <code>InfernoBlade</code> as a subclass. Inheritance let me reuse the base sword's fields and methods while adding fire-specific properties and abilities. The subclass calls <code>super()</code> in its constructor to initialize the parent class first.</p>
+
+                        <p class="code-label">Extending the parent class</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">InfernoBlade.java</span>
+                            </div>
+                            <pre><code>public class InfernoBlade extends ElementalBlade {
+    private final String gemstone;
+    private final String element;
+    private final int flameSpawnRate;
+    private final int glowIntensityLux;
+    private final int burnRate;
+
+    private int heatIntensity;
+    private int projectileSpeed;
+    private String[] flameTypes = new String[5];
+    private int fireMasteryLevel;
+    private int instabilityLevel;
+
+    public InfernoBlade(String sBM, Color colo, boolean loy,
+            double lngCM, double wCM, String swordN, boolean dW,
+            String gemS, String el, int fSR, int gIL, int bR,
+            int hI, int pS, int fML, int instL) {
+        super(sBM, colo, loy, lngCM, wCM, swordN, dW);
+        gemstone = gemS;
+        element = el;
+        flameSpawnRate = fSR;
+        glowIntensityLux = gIL;
+        burnRate = bR;
+        heatIntensity = hI;
+        projectileSpeed = pS;
+        fireMasteryLevel = fML;
+        instabilityLevel = instL;
+    }
+}</code></pre>
+                        </div>
+
+                        <p class="code-label">Subclass-only methods using inherited fields</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">InfernoBlade.java</span>
+                            </div>
+                            <pre><code>public void flameBurst() {
+    if (getManaLevel() &gt;= 25) {
+        setManaLevel(getManaLevel() - 25);
+        heatIntensity += 20;
+        instabilityLevel += 10;
+        System.out.println("A massive flame burst erupts from the blade!");
+    } else {
+        System.out.println("Not enough mana!");
+    }
+}
+
+public void overheatBlade() {
+    if (getManaLevel() &gt;= 40) {
+        setManaLevel(getManaLevel() - 40);
+        heatIntensity += 30;
+        instabilityLevel += 20;
+        System.out.println("The blade begins to overheat!");
+        if (instabilityLevel &gt;= 90) {
+            System.out.println("The blade has become highly unstable!");
+            setDurability(getDurability() - 50);
+        }
+    } else {
+        System.out.println("Not enough mana!");
+    }
+}</code></pre>
+                        </div>
+
+                        <p class="code-label">Using both parent and child behaviour together</p>
+                        <div class="code-showcase">
+                            <div class="code-header">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                                <span class="filename">InfernoBlade.java</span>
+                            </div>
+                            <pre><code>public void flingBlade() {
+    if (getManaLevel() &gt;= 30) {
+        setManaLevel(getManaLevel() - 30);
+        heatIntensity += 30;
+        instabilityLevel += 10;
+        if (getDualWield()) {
+            System.out.println("The blade was flung, spit "
+                + flameTypes[(int) (Math.random() * 5)]
+                + " at the enemy and returned!");
+        } else {
+            System.out.println("The blade was flung, spit "
+                + flameTypes[(int) (Math.random() * 5)]
+                + " at the enemy and returned!");
+        }
+        if (instabilityLevel &gt; 90) {
+            System.out.println("The blade has become highly unstable!");
+        }
+    }
+}</code></pre>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Zach.<span>Dev</span></h3>
+                <p>Working hard to grow every single day.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/zachr54" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zachary-rusafov/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:zachary.rusafov@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zach. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

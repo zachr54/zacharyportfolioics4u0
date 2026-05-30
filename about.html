@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About Zach - Classical Guitar, Cultural Folk Dance, Rugby, Robotics, Powerlifting, Awards, and Competitions.">
+    <title>Zach | About Me</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <a href="index.html" class="logo">Zach.<span>Dev</span></a>
+        <button class="mobile-menu-btn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Me</a>
+            <a href="ics4u0.html">ICS4U0</a>
+            <a href="tutorial.html">Tutorial</a>
+            <a href="goals.html">Goals</a>
+            <a href="bibliography.html">Citations</a>
+        </nav>
+    </header>
+
+    <!-- About Me Section -->
+    <section id="about" class="about section" style="padding-top: 140px; padding-bottom: 80px;">
+        <div class="container reveal">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A closer look at my school life, hobbies, teams, and achievements.</p>
+            
+            <!-- 1. My Story -->
+            <h3 class="subsection-title"><i class="fa-solid fa-book-open"></i> My Story</h3>
+            <div class="about-intro-card reveal" style="margin-bottom: 3rem;">
+                <p style="margin-bottom: 1rem;">
+                    Hi, I'm <strong>Zach</strong>! I am a Grade 11 student passionate about academics, Math, Computer Science, athletics, and the arts. 
+                </p>
+                <p>
+                    What makes me the person I am today is my desire to constantly challenge myself in as large variety of subjects. Whether I'm working with Math and Computer Science, lifting weights, playing on a sports team, or performing dance and music, I thrive in challenges and work through struggles. These experienes have taught me the value of discipline, humillity, teamwork, desire, and expression. This allows me to approach my life in a strong, unique way.
+                </p>
+            </div>
+
+            <!-- 2. Arts Section -->
+            <h3 class="subsection-title"><i class="fa-solid fa-palette"></i> Arts</h3>
+            <div class="grid-2" style="margin-bottom: 3rem;">
+                <div class="card about-card reveal">
+                    <div class="card-image-wrapper">
+                        <img src="assets/music.png" alt="Zach playing Classical Guitar" loading="lazy" class="card-img"
+                            id="img-music">
+                    </div>
+                    <div class="card-content">
+                        <h3><i class="fa-solid fa-guitar"></i> Classical Guitar</h3>
+                        <p>Music is an incredibly valuable part of my life. I practice weekly and work towards perfecting classical music pieces and performing them at the Provincial level. This has taught me the power of patience and focus. It has also caused me to value discipline and consistency over bursts of motivation.</p>
+                    </div>
+                </div>
+                <div class="card about-card reveal" style="transition-delay: 0.15s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/dance.png" alt="Zach performing Cultural Folk Dance" loading="lazy" class="card-img"
+                            id="img-dance">
+                    </div>
+                    <div class="card-content">
+                        <h3><i class="fa-solid fa-people-group"></i> Cultural Dance</h3>
+                        <p>Every Friday and Sunday, I participate in dance practices, connecting me to my Bulgarian heritage and teaching me to perform on stage. It has allowed me to appreciate my Bulgarian roots and has aided me to develop confidence in public settings.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Teams Section -->
+            <h3 class="subsection-title"><i class="fa-solid fa-users"></i> Teams</h3>
+            <div class="grid-2" style="margin-bottom: 3rem;">
+                <div class="card team-card reveal">
+                    <div class="card-image-wrapper">
+                        <img src="assets/rugby.png" alt="Zach's Rugby Team" loading="lazy" class="card-img"
+                            id="img-rugby">
+                    </div>
+                    <div class="card-content">
+                        <h3>🏉 Rugby</h3>
+                        <p>Competing on the pitch has taught me resilience, teamwork, and discipline in a unique way that many other activities cannot. It has made me a more determined, tough-minded individual who isn't afraid to take hits and keep moving forward.</p>
+                    </div>
+                </div>
+                <div class="card team-card reveal" style="transition-delay: 0.15s;">
+                    <div class="card-image-wrapper">
+                        <img src="assets/robotics.png" alt="Mackenzie Lyons Robotics Team" loading="lazy"
+                            class="card-img" id="img-robotics">
+                    </div>
+                    <div class="card-content">
+                        <h3><i class="fa-solid fa-robot"></i> Robotics (Mackenzie Lyons)</h3>
+                        <p>Designing, building, and programming a robot as part of the Mackenzie FIRST Tech Challenge team has allowed me to develop critical thinking and Engineering-focused skills.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Powerlifting Section -->
+            <h3 class="subsection-title"><i class="fa-solid fa-dumbbell"></i> Powerlifting</h3>
+            <div class="powerlifting-layout reveal">
+
+                <!-- Left: Interactive Stats -->
+                <div class="powerlifting-section">
+                    <div class="powerlifting-intro">
+                        <p>For me, powerlifting isn't like any other sport. It teaches me to hold myself accountable to what I wish to accomplish and provides an environment where luck is not a factor; only discipline and training.</p>
+                    </div>
+                    <div class="lift-stats">
+                        <div class="lift-card">
+                            <div class="lift-icon"><i class="fa-solid fa-person-falling-burst"></i></div>
+                            <div class="lift-number"><span class="lift-counter" data-target="185">0</span><span class="lift-unit">kg</span></div>
+                            <div class="lift-label">Squat</div>
+                            <div class="lift-bar-wrap"><div class="lift-bar" data-pct="91"></div></div>
+                        </div>
+                        <div class="lift-card">
+                            <div class="lift-icon"><i class="fa-solid fa-weight-hanging"></i></div>
+                            <div class="lift-number"><span class="lift-counter" data-target="145">0</span><span class="lift-unit">kg</span></div>
+                            <div class="lift-label">Bench Press</div>
+                            <div class="lift-bar-wrap"><div class="lift-bar" data-pct="72"></div></div>
+                        </div>
+                        <div class="lift-card">
+                            <div class="lift-icon"><i class="fa-solid fa-arrow-up-from-ground-water"></i></div>
+                            <div class="lift-number"><span class="lift-counter" data-target="202" data-decimal=".5">0</span><span class="lift-unit">kg</span></div>
+                            <div class="lift-label">Deadlift</div>
+                            <div class="lift-bar-wrap"><div class="lift-bar" data-pct="100"></div></div>
+                        </div>
+                    </div>
+                    <div class="powerlifting-total">
+                        <div class="total-label">Current Total</div>
+                        <div class="total-number"><span class="lift-counter" data-target="532" data-decimal=".5">0</span> kg</div>
+                        <div class="total-sub">Squat · Bench · Deadlift</div>
+                    </div>
+                </div>
+
+                <!-- Right: Photo -->
+                <div class="powerlifting-photo-col">
+                    <div class="powerlifting-photo-frame">
+                        <!-- Replace src with your actual photo path e.g. assets/powerlifting.jpg -->
+                        <img src="assets/powerlifting.jpeg" alt="Zach powerlifting" class="powerlifting-photo" id="img-powerlifting"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="photo-placeholder">
+                            <i class="fa-solid fa-dumbbell"></i>
+                            <span>Add a photo here</span>
+                            <small>assets/powerlifting.jpg</small>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- 5. Awards Section -->
+            <h3 class="subsection-title"><i class="fa-solid fa-trophy"></i> Awards</h3>
+            <div class="awards-grid" style="margin-bottom: 3rem;">
+                <div class="award-item reveal">
+                    <div class="award-icon"><i class="fa-solid fa-guitar"></i></div>
+                    <h4>OMFA Provincials Classical Guitar Level 6</h4>
+                    <p>Competed at the Ontario Music Festivals Association's Provincial Championship, and won a gold medal and cash prize.</p>
+                </div>
+                <div class="award-item reveal" style="transition-delay: 0.1s;">
+                    <div class="award-icon"><i class="fa-solid fa-dumbbell"></i></div>
+                    <h4>Band of Barbells Spring Classic</h4>
+                    <p>Competed in the 105kg weight class at a regional powerlifting meet and won first place.</p>
+                </div>
+                <div class="award-item reveal" style="transition-delay: 0.2s;">
+                    <div class="award-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                    <h4>Dublin Heights Math, Science, and Principal's Awards</h4>
+                    <p>Awarded merit awards at Dublin Heights for high performance in STEM subjects.</p>
+                </div>
+            </div>
+
+            <!-- 5. Competitions Section -->
+            <h3 class="subsection-title"><i class="fa-solid fa-medal"></i> Competitions</h3>
+            <div class="competitions-grid">
+                <div class="competition-item reveal">
+                    <div class="competition-icon"><i class="fa-solid fa-calculator"></i></div>
+                    <h4>Waterloo Math Contests</h4>
+                    <p>Competed in a large variety of Math contests, including Euclid, Canadian Senior Mathematics Contest, Hypatia Contest, Fermat Contest, and Canadian Open Mathematics Contest.</p>
+                </div>
+                <div class="competition-item reveal" style="transition-delay: 0.1s;">
+                    <div class="competition-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                    <h4>Coding Contests</h4>
+                    <p>Competed in the Senior Canadian Computing Competition, working to solve problems using Java and data structures.</p>
+                </div>
+                <div class="competition-item reveal" style="transition-delay: 0.2s;">
+                    <div class="competition-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h4>Mackenzie Robotics Club Add-On Challenge</h4>
+                    <p>Worked to design an add-on for a small robot that was designed for the Mackenzie Robotics Club (MRC)</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <h3>Zach.<span>Dev</span></h3>
+                <p>Working hard to grow every single day.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="https://github.com/zachr54" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/zachary-rusafov/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="mailto:zachary.rusafov@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Zach. Built with passion and code.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
